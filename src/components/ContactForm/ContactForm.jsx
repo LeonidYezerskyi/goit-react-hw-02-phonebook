@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import css from './ContactForm.module.css';
 
 
 class ContactForm extends React.Component {
@@ -39,9 +40,9 @@ class ContactForm extends React.Component {
         const { name, number } = this.state;
         return (
             <div>
-                <form onSubmit={this.onSubmitForm}>
+                <form className={css.form} onSubmit={this.onSubmitForm}>
                     <label>
-                        Name
+                        <p className={css.title}>Name</p>
                         <input
                             type="text"
                             name="name"
@@ -53,7 +54,7 @@ class ContactForm extends React.Component {
                         />
                     </label>
                     <label>
-                        Number
+                        <p className={css.title}>Number</p>
                         <input
                             type="tel"
                             name="number"
@@ -65,7 +66,7 @@ class ContactForm extends React.Component {
                         />
                     </label>
 
-                    <button type="submit">Add contact</button>
+                    <button className={css.button} type="submit">Add contact</button>
                 </form>
             </div>
         )

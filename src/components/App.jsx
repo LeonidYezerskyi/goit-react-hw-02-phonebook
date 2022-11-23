@@ -4,6 +4,7 @@ import { nanoid } from "nanoid";
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
+import css from './App.module.css';
 
 export class App extends React.Component {
 
@@ -67,12 +68,13 @@ export class App extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          fontSize: 30,
-          color: '#010101'
+          fontSize: 15,
+          color: '#010101',
+          background: 'rgb(111, 167, 0)',
         }}
       >
-        <div>
-          <h1>Phonebook</h1>
+        <div className={css.paper}>
+          <h1 className={css.title}> Phonebook</h1>
           <ContactForm addContact={this.addContact} />
 
           <h2>Contacts</h2>

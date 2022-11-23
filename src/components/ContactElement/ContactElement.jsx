@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import css from './ContactElement.module.css';
 
 
 const ContactElement = ({ name, number, id, deleteContact }) => {
     return (
-        <li key={id}>{name}: {number}<button value={id} onClick={deleteContact}>Delete</button></li>
+        <li className={css.item} key={id}>{name}: {number}<button className={css.button} value={id} onClick={deleteContact}>Delete</button></li>
     )
 }
 
