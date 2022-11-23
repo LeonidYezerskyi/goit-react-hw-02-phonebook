@@ -19,7 +19,7 @@ export class App extends React.Component {
   }
 
   addContact = (name, number) => {
-    if (this.state.contacts.filter(contact => contact.name.toLowerCase() === name.toLowerCase())) {
+    if (this.state.contacts.filter(contact => contact.name.toLowerCase() === name.toLowerCase()).length) {
       alert(`${name} is already in contact list.`);
       return;
     };
@@ -77,7 +77,7 @@ export class App extends React.Component {
           <h1 className={css.title}> Phonebook</h1>
           <ContactForm addContact={this.addContact} />
 
-          <h2>Contacts</h2>
+          <h2 className={css.title}>Contacts</h2>
           <Filter onChangeFilter={this.onChangeFilter} filter={filter} />
           <ContactList contacts={filteredContacts} deleteContact={this.deleteContact} />
         </div >

@@ -44,6 +44,7 @@ class ContactForm extends React.Component {
                     <label>
                         <p className={css.title}>Name</p>
                         <input
+                            className={css.inputPaper}
                             type="text"
                             name="name"
                             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -56,6 +57,7 @@ class ContactForm extends React.Component {
                     <label>
                         <p className={css.title}>Number</p>
                         <input
+                            className={css.inputPaper}
                             type="tel"
                             name="number"
                             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
