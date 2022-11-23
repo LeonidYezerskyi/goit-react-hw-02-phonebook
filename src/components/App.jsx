@@ -18,6 +18,11 @@ export class App extends React.Component {
   }
 
   addContact = (name, number) => {
+    if (this.state.contacts.filter(contact => contact.name.toLowerCase() === name.toLowerCase())) {
+      alert(`${name} is already in contact list.`);
+      return;
+    };
+
     this.setState(prevState => ({
       contacts: [...prevState.contacts, { name, number, id: nanoid() }]
     }))
