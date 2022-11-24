@@ -16,10 +16,11 @@
     font-weight: 700;
     cursor: pointer;
     background-color: rgb(247, 247, 247);
+    color: rgb(0, 155, 26);
     border: 1px solid black;
     border-radius: 50%;
 }
 
 .inputPaper {
-    border: none;
+    border: 1px solid black;
 }

@@ -70,7 +70,6 @@ export class App extends React.Component {
           alignItems: 'center',
           fontSize: 15,
           color: '#010101',
-          background: 'rgb(111, 167, 0)',
         }}
       >
         <div className={css.paper}>

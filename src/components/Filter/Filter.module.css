@@ -11,6 +11,6 @@
 }
 
 .inputPaper {
-    border: none;
-    width: 169px;
+    border: 1px solid black;
+        width: 169px;
 }
