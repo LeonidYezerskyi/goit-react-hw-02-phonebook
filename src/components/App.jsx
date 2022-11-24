@@ -19,7 +19,8 @@ export class App extends React.Component {
   }
 
   addContact = (name, number) => {
-    if (this.state.contacts.filter(contact => contact.name.toLowerCase() === name.toLowerCase()).length) {
+    // if (this.state.contacts.filter(contact => contact.name.toLowerCase() === name.toLowerCase()).length)
+    if (this.state.contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())) {
       alert(`${name} is already in contact list.`);
       return;
     };
